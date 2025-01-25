@@ -37,6 +37,8 @@ class ConnectorFacade
                 );
             }
         } catch (RedisException) {
+            $isConnected = false;
+            throw new RedisException('Redis connection error');
         }
 
         if ($isConnected) {

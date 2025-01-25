@@ -27,7 +27,7 @@ readonly class GetCartController
         if (! $cart) {
             $response->getBody()->write(
                 json_encode(
-                    ['message' => 'Cart not found'],
+                    [ 'message' => 'Cart not found' ],
                     JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
                 )
             );
